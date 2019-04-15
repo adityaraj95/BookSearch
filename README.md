@@ -1,5 +1,23 @@
 This project is still under development.
 
+
+## How to install and run this project
+
+Clone / Download the project using the following command
+
+### `git clone https://github.com/adityaraj95/BookSearch.git`
+
+go into the directory where the clone is created and type the following command
+
+### `npm install`
+
+Final Step will be to start the localhost server
+
+### `npm start`
+
+This will start the development server and you can view the project in the browser at [http://localhost:3000](http://localhost:3000)
+
+
 It was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
