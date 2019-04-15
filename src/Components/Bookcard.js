@@ -7,7 +7,6 @@ const Bookcard = (props) => {
 		<img src={props.image} alt=""/>
 		
 		<div className="desc">
-		
 			<h2>Title: {props.title}</h2>
 			<h2>Author: {props.author}</h2>
 			<p>Number Of Pages: {props.pages}</p>
