@@ -1,12 +1,13 @@
 .footer-basic-centered{
-	background-color: #292c2f;
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-	box-sizing: border-box;
+	background-color: ##282c34;
+
 	width: 100%;
 	text-align: center;
 	font: normal 18px sans-serif;
-	position: relative;
-	padding: 45px;
+	position: absolute;
+	bottom: 0;
+	height: 35px;
+	padding: 35px;
 	margin-top: 80px;
 }
 
@@ -25,7 +26,7 @@
 .footer-basic-centered .footer-links{
 	list-style: none;
 	font-weight: bold;
-	color:  #ffffff;
+	color:  #000000;
 	padding: 35px 0 23px;
 	margin: 0;
 }
