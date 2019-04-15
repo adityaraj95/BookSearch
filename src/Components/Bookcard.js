@@ -5,10 +5,19 @@ const Bookcard = (props) => {
 	return (
 	<div className="card-container">
 		<div className="desc">
-			<h2>Title: {props.title}</h2>
-			<h2>Author: {props.author}</h2>
-			<p>Number Of Pages: {props.pages}</p>
-			<p></p>
+		
+		<table className="result">
+			<tr>
+				<th>Title</th>
+				<th>Author</th>
+				<th>Number of pages</th>
+			</tr>
+			<tr>
+				<td> {props.title} </td>
+				<td> {props.author}</td>
+				<td> {props.pages}</td>
+			</tr>
+		</table>
 		</div>
 	</div>
 	)

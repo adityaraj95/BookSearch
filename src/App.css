@@ -40,6 +40,17 @@ header{
 	
 }
 
+.result{
+	margin: 0 auto;
+	
+}
+
+table , td, th{
+	
+	text-align: left;
+	padding: 20px;
+}
+
 header h1{
 	display: inline;
 	margin-left: 15px;
