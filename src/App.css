@@ -55,3 +55,15 @@ Button{
 	text-align: center;
 	
 }
+
+.searchbox.error {
+	border-color: red;
+}
+
+.errormessage {
+	color: red;
+}
+
+.errormessage.hide {
+	display: none;
+}

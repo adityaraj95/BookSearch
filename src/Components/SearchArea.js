@@ -5,8 +5,9 @@ const SearchArea = (props) => {
 	<div className="search-area">
 		<br/>
 		<form onSubmit={props.searchBook}action="">
-				<input placeholder="Enter ISBN" title="Enter ISBN" onChange={props.handleSearch}/>
+				<input className="searchbox" placeholder="Enter ISBN" title="Enter ISBN" onChange={props.handleSearch}/>
 				<button type="submit"> Search </button>
+				<div className="errormessage hide">Enter valid ISBN</div>
 		</form>
 	</div>
 	)

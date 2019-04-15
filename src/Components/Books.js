@@ -28,8 +28,16 @@ class Books extends Component {
 	
 	handleSearch =(e)=>{
 		
-		
-		this.setState({ searchField: e.target.value })
+		e.preventDefault();
+		var isValidISBN = e.target.value.match(/[9]+[0-9]{12}/g);
+		if(isValidISBN) {
+			e.target.classList.remove("error");
+			e.target.nextElementSibling.nextElementSibling.classList.add("hide");
+			this.setState({ searchField: e.target.value });
+		} else {
+			e.target.classList.add("error");
+			e.target.nextElementSibling.nextElementSibling.classList.remove("hide");
+		}
 		
 	}
     render() {

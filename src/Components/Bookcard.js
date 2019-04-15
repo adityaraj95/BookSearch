@@ -8,6 +8,7 @@ const Bookcard = (props) => {
 			<h2>Title: {props.title}</h2>
 			<h2>Author: {props.author}</h2>
 			<p>Number Of Pages: {props.pages}</p>
+			<p></p>
 		</div>
 	</div>
 	)

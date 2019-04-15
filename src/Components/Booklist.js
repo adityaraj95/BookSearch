@@ -8,10 +8,11 @@ const Booklist = (props) => {
 			
 			props.books.map((book,i) => {
 					return <Bookcard
-							key={i}
-							title={book.volumeInfo.title}
-							author={book.volumeInfo.authors}
-							pages={book.volumeInfo.pageCount}
+						key={i}
+						image={book.volumeInfo.imageLinks.thumbnail}
+						title={book.volumeInfo.title}
+						author={book.volumeInfo.authors}
+						pages={book.volumeInfo.pageCount}
 					/>
 			})
 		}
