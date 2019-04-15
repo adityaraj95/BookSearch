@@ -6,9 +6,9 @@ const Booklist = (props) => {
 	<div className="list">
 		{	
 			
-			props.books.map((book) => {
+			props.books.map((book,i) => {
 					return <Bookcard
-							image={book.volumeInfo.imageLinks.thumbnail}
+							key={i}
 							title={book.volumeInfo.title}
 							author={book.volumeInfo.authors}
 							pages={book.volumeInfo.pageCount}
