@@ -1,4 +1,6 @@
-This project is still under development.
+# Search Book Using React.js, Google Books API, and MySQL.
+
+Search local database using Rest API created by me [here](https://github.com/adityaraj95/SpringBoot-MySQL-REST-API.git)
 
 
 ## How to install and run this project
@@ -48,3 +50,13 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Working
+
+### Invalid ISBN Number
+
+![Not Starting from 9 or length not equal to 13](https://github.com/adityaraj95/BookSearch/blob/master/src/Components/invalidISBN.PNG)
+
+### Valid ISBN and Not Read
+
+![Fetch from Google Books API](https://github.com/adityaraj95/BookSearch/blob/master/src/Components/SEARCH.PNG)
