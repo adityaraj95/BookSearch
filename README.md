@@ -1,6 +1,8 @@
 # Search Book Using React.js, Google Books API, and MySQL.
 
-Search local database using Rest API created by me [here](https://github.com/adityaraj95/SpringBoot-MySQL-REST-API.git)
+Search local database using Rest API created by me [here](https://github.com/adityaraj95/SpringBoot-MySQL-REST-API.git) 
+
+React is used along side JavaScript for Validation and Search process.
 
 
 ## How to install and run this project
