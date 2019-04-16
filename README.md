@@ -1,6 +1,6 @@
-# Search Book Using React.js, Google Books API, and MySQL.
+# Search Book Using React.js and Google Books API
 
-Search local database using Rest API created by me [here](https://github.com/adityaraj95/SpringBoot-MySQL-REST-API.git). When book is not found in localDB than it uses the Google Book API to fetch the details. 
+Find any book using its ISBN number. Only 13- numeric version of ISBN is allowed.
 
 React is used along side JavaScript for Validation and Search process.
 
@@ -53,12 +53,10 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Working
+## Working Screenshots
 
 ### Invalid ISBN Number
 
-![Not Starting from 9 or length not equal to 13](https://github.com/adityaraj95/BookSearch/blob/master/src/Components/invalidISBN.PNG)
 
-### Valid ISBN and Not Read
+### Valid ISBN
 
-![Fetching from Google Books API](https://github.com/adityaraj95/BookSearch/blob/master/src/Components/Search.PNG)
