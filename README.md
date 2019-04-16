@@ -59,4 +59,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ### Valid ISBN and Not Read
 
-![Fetch from Google Books API](https://github.com/adityaraj95/BookSearch/blob/master/src/Components/SEARCH.PNG)
+![Fetching from Google Books API](https://github.com/adityaraj95/BookSearch/blob/master/src/Components/SEARCH.PNG)
