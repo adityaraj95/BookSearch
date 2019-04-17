@@ -7,7 +7,7 @@ import Booklist from './Booklist';
 class Books extends Component {
 	
 
-	constructor(props){
+	constructor(props){ 		//Constructor
 		super(props);
 		this.state= {
 				books: [],
@@ -17,54 +17,31 @@ class Books extends Component {
 		}
 	}
 	
-	componentDidMount(){
-		
-			
-			
-	}
-	
 	searchBook = (e) =>{
 		e.preventDefault();
-		/*{items.map((item,i)=> {
-			
-			
-				
-				if(this.state.searchField == item.ISBN)
-				{
-					localFound= true;
-				}
-				else
-				{
-					localFound=false;
-				}
-				
-			})
-		}
-		
-		if(localFound== true){
-			
-			
-		}
-		else{
-		*/
+		var isbnValue = e.target[0].value;
 		fetch('http://localhost:8080/rest/books/all')
 			.then(res => res.json())
 			.then(json=>{
-				
-				console.log(json);
-				this.setState({	localbooks: json })		
+				var filteredJson = json.filter(book => book.isbn == isbnValue);		// getting Data from Local DB using ISBN
+				if(filteredJson.length > 0) {
+					var bookObj = {};					//Matching with the structure of Google API response
+					bookObj.volumeInfo = {};
+					bookObj.volumeInfo.title = filteredJson[0].title;
+					bookObj.volumeInfo.authors = filteredJson[0].author;
+					bookObj.volumeInfo.pageCount = filteredJson[0].pages;
+					bookObj.volumeInfo.checked = true;		//Indicate that the user has read the bold
+					this.setState({	books: [bookObj] });
+				} else {			// Call Google API if book not found in LocalDB
+					request
+					   .get("https://www.googleapis.com/books/v1/volumes")
+					   .query({ "q": this.state.searchField})		//ISBN Query to search
+					   .then((data) => {
+						   console.log(data)
+						   this.setState({ books: [...data.body.items]})
+					});
+				}
 			});
-		
-		request
-			   .get("https://www.googleapis.com/books/v1/volumes")
-			   .query({ q: this.state.searchField})
-			   .then((data) => {
-				   console.log(data)
-				   this.setState({ books: [...data.body.items]})
-			})
-					
-		//}
-		
 	}
 	
 	
@@ -72,7 +49,7 @@ class Books extends Component {
 		
 		e.preventDefault();
 		var isValidISBN = e.target.value.match(/[9]+[0-9]{12}/g);
-		if(isValidISBN) {
+		if(isValidISBN && e.target.value.length === 13) {
 			e.target.classList.remove("error");
 			e.target.nextElementSibling.nextElementSibling.classList.add("hide");
 			this.setState({ searchField: e.target.value });
@@ -82,23 +59,16 @@ class Books extends Component {
 		}
 		
 	}
-	handleSubmit =(e)=>{		
+	handleSubmit =(e)=>{		//Define what to do on submit
 			e.preventDefault();
 			window.location.reload();
 		}
-    render() {
-		
-		
-		
+    render() {			//Render the Page
 		return (
 		<div>
-			
 			<SearchArea searchBook={this.searchBook} handleSearch={this.handleSearch} />
-			
-			
-			<Booklist books={this.state.books} /> 
+			<Booklist books={this.state.books} handleSubmit={this.handleSubmit}/> 
 			<br/>				
-			<button type="submit" onClick={this.handleSubmit}> Submit and Search Again </button> 
 		</div>
     );
   }

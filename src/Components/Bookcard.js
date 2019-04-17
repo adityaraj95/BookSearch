@@ -1,12 +1,12 @@
 import React from 'react';
 
 
-const Bookcard = (props) => {
+const Bookcard = (props) => { 
 	return (
 	<div className="card-container">
 		<div className="desc">
 		
-		<table className="result">
+		<table className="result"> 
 			<tbody>
 			<tr>
 				<th>Title</th>
@@ -20,12 +20,13 @@ const Bookcard = (props) => {
 				<td> {props.title} </td>
 				<td> {props.author}</td>
 				<td> {props.pages}</td>
-				<td> <input type="checkbox" /> </td>
+				<td> <input type="checkbox" checked={!!props.readFlag}/> </td>
 				<td> <input type="textbox" /> </td>
 				<td> </td>
 			</tr>
 			</tbody>
 		</table>
+		<button type="submit" onClick={props.handleSubmit}> Submit and Search Again </button> 
 		</div>
 	</div>
 	)

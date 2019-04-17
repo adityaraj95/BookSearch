@@ -7,7 +7,7 @@ const Booklist = (props) => {
 		{	
 		
 		
-		props.books.slice(0,1).map((book,i) => {
+		props.books.slice(0,1).map((book,i) => { //Mapping the Data from JSON response to variables
 			
 			return <Bookcard
 							
@@ -15,7 +15,8 @@ const Booklist = (props) => {
 						title={book.volumeInfo.title}
 						author={book.volumeInfo.authors}
 						pages={book.volumeInfo.pageCount}
-
+						readFlag={book.volumeInfo.checked}
+						handleSubmit={props.handleSubmit}
 					
 					/>
 			})
