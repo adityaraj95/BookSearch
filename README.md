@@ -57,7 +57,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ### Initial Stage
 
-![Valid ISBN](https://github.com/adityaraj95/BookSearch/blob/master/src/Components/SEARCH.PNG)
+![Valid ISBN](https://github.com/adityaraj95/BookSearch/blob/master/src/Components/Search.PNG)
 
 ### Invalid ISBN Number
 
