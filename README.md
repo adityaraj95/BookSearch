@@ -11,7 +11,7 @@ React is used along side JavaScript for Validation and Search process.
 
 ### Please set up the API made by me from [here](https://github.com/adityaraj95/SpringBoot-MySQL-REST-API)
 
-Follow the steps here(https://github.com/adityaraj95/SpringBoot-MySQL-REST-API/README.md) to initialize the back-end server.
+Follow the steps here(https://github.com/adityaraj95/SpringBoot-MySQL-REST-API/blob/master/README.md) to initialize the back-end server.
 
 Clone / Download the project using the following command
 
