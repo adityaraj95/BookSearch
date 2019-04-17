@@ -11,7 +11,6 @@ class Books extends Component {
 		super(props);
 		this.state= {
 				books: [],
-				items: [],
 				localbooks: [],
 				searchField:'' ,
 				localFound: false,
@@ -53,10 +52,7 @@ class Books extends Component {
 			.then(json=>{
 				
 				console.log(json);
-				this.setState({
-					localbooks: json,
-					
-				})		
+				this.setState({	localbooks: json })		
 			});
 		
 		request

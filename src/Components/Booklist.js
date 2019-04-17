@@ -4,7 +4,10 @@ import Bookcard from './Bookcard';
 const Booklist = (props) => {
 	return (
 	<div className="list">
-		{	props.books.slice(0,1).map((book,i) => {
+		{	
+		
+		
+		props.books.slice(0,1).map((book,i) => {
 			
 			return <Bookcard
 							
