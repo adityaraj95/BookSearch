@@ -55,8 +55,18 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Working Screenshots
 
+### Initial Stage
+
+![Valid ISBN](https://github.com/adityaraj95/BookSearch/blob/master/src/Components/SEARCH.PNG)
+
 ### Invalid ISBN Number
 
+![Invalid ISBN TEST](https://github.com/adityaraj95/BookSearch/blob/master/src/Components/invalidISBN.PNG)
 
-### Valid ISBN
+### Fetching from Local Server
 
+![Valid ISBN From Local Server](https://github.com/adityaraj95/BookSearch/blob/master/src/Components/LocalDB.PNG)
+
+### Fetching from the Google API
+
+![Valid ISBN from Google API](https://github.com/adityaraj95/BookSearch/blob/master/src/Components/GoogleAPI.PNG)
