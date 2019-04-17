@@ -7,6 +7,7 @@ const Bookcard = (props) => {
 		<div className="desc">
 		
 		<table className="result">
+			<tbody>
 			<tr>
 				<th>Title</th>
 				<th>Author</th>
@@ -19,10 +20,11 @@ const Bookcard = (props) => {
 				<td> {props.title} </td>
 				<td> {props.author}</td>
 				<td> {props.pages}</td>
-				<td> <input type="checkbox" onChange={''}/> </td>
-				<td> <input type="textbox" onChange={''}/> </td>
-				<td> <button type="submit" onChange={''}> Submit and Search Again </button> </td>
+				<td> <input type="checkbox" /> </td>
+				<td> <input type="textbox" /> </td>
+				<td> </td>
 			</tr>
+			</tbody>
 		</table>
 		</div>
 	</div>

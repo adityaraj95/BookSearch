@@ -5,17 +5,59 @@ import Booklist from './Booklist';
 
 
 class Books extends Component {
+	
+
 	constructor(props){
 		super(props);
 		this.state= {
 				books: [],
+				items: [],
+				localbooks: [],
 				searchField:'' ,
-				searchFieldError: '',
+				localFound: false,
 		}
+	}
+	
+	componentDidMount(){
+		
+			
+			
 	}
 	
 	searchBook = (e) =>{
 		e.preventDefault();
+		/*{items.map((item,i)=> {
+			
+			
+				
+				if(this.state.searchField == item.ISBN)
+				{
+					localFound= true;
+				}
+				else
+				{
+					localFound=false;
+				}
+				
+			})
+		}
+		
+		if(localFound== true){
+			
+			
+		}
+		else{
+		*/
+		fetch('http://localhost:8080/rest/books/all')
+			.then(res => res.json())
+			.then(json=>{
+				
+				console.log(json);
+				this.setState({
+					localbooks: json,
+					
+				})		
+			});
 		
 		request
 			   .get("https://www.googleapis.com/books/v1/volumes")
@@ -23,8 +65,12 @@ class Books extends Component {
 			   .then((data) => {
 				   console.log(data)
 				   this.setState({ books: [...data.body.items]})
-			   })
-	}	
+			})
+					
+		//}
+		
+	}
+	
 	
 	handleSearch =(e)=>{
 		
@@ -40,12 +86,23 @@ class Books extends Component {
 		}
 		
 	}
+	handleSubmit =(e)=>{		
+			e.preventDefault();
+			window.location.reload();
+		}
     render() {
+		
+		
+		
 		return (
 		<div>
-		<SearchArea searchBook={this.searchBook} handleSearch={this.handleSearch} 
-		/>
-			<Booklist books={this.state.books}/> 
+			
+			<SearchArea searchBook={this.searchBook} handleSearch={this.handleSearch} />
+			
+			
+			<Booklist books={this.state.books} /> 
+			<br/>				
+			<button type="submit" onClick={this.handleSubmit}> Submit and Search Again </button> 
 		</div>
     );
   }
