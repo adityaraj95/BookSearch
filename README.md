@@ -2,10 +2,16 @@
 
 Find any book using its ISBN number. Only 13- numeric version of ISBN is allowed.
 
+The application makes call using the Rest API I made [here](https://github.com/adityaraj95/SpringBoot-MySQL-REST-API). If the result is not found then it makes a Google Book API call to fetch the result from Google.
+
 React is used along side JavaScript for Validation and Search process.
 
 
 ## How to install and run this project
+
+### Please set up the API made by me from [here](https://github.com/adityaraj95/SpringBoot-MySQL-REST-API)
+
+Follow the steps [here](https://github.com/adityaraj95/SpringBoot-MySQL-REST-API/blob/master/README.md) to initialize the back-end server.
 
 Clone / Download the project using the following command
 
@@ -20,8 +26,6 @@ Final Step will be to start the localhost server
 ### `npm start`
 
 This will start the development server and you can view the project in the browser at [http://localhost:3000](http://localhost:3000)
-
-
 It was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -55,8 +59,18 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Working Screenshots
 
+### Initial Stage
+
+![Valid ISBN](https://github.com/adityaraj95/BookSearch/blob/master/src/Components/Search.PNG)
+
 ### Invalid ISBN Number
 
+![Invalid ISBN TEST](https://github.com/adityaraj95/BookSearch/blob/master/src/Components/invalidISBN.PNG)
 
-### Valid ISBN
+### Fetching from Local Server
 
+![Valid ISBN From Local Server](https://github.com/adityaraj95/BookSearch/blob/master/src/Components/LocalDB.PNG)
+
+### Fetching from the Google API
+
+![Valid ISBN from Google API](https://github.com/adityaraj95/BookSearch/blob/master/src/Components/GoogleAPI.PNG)
